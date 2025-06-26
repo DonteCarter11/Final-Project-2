@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digimon Info</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
-</body>
-<script src="index.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/201dec45da.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="landing">
+      <nav>
+        <div class="row nav__row">
+          <div class="nav__logo">
+            <img
+              class="nav__logo--img"
+              src="whitelogo.39850b27.png"
+              alt="logo"
+            />
+          </div>
+          <div class="nav__links">
+            <a href="" class="nav__link">Home</a>
+            <a href="" class="nav__link">Find Your Card</a>
+            <a href="" class="nav__link nav__link--btn">Contact</a>
+          </div>
+        </div>
+      </nav>
+      <div class="overlay">
+        <div class="layer"></div>
+      </div>
+      <header>
+        <div class="container">
+          <div class="row">
+            <h1>Browse our cards</h1>
+            <div class="input__wrapper">
+              <input type="text" placeholder="search by name and id" />
+              <div class="search__wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
+    <section id="search">
+      <div class="progess"></div>
+      <div class="content__wrapper">
+        <p class="search__info">Search results:</p>
+        <div class="price__filter">
+          <h2>Price Range: <span class="purple">$0 to $100,000</span></h2>
+      
+          <!-- /.range--slider -->
+          <div class="range-slider">
+            <input type="number" class="min-price" value="25" min="1" max="100">
+            <input type="number" class="max-price" value="75" min="1" max="100">
+
+            <div class="range">
+               <input type="range" class="min-price" value="25" min="1" max="100">
+            <input type="range" class="max-price" value="75" min="1" max="100">
+<div class="slider">
+  <div class="progress"></div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards"></div>
+    </section>
+  </body>
+  <script src="index.js"></script>
 </html>
