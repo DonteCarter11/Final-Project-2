@@ -28,15 +28,15 @@ li {
 }
 
 h1 {
-  font-weight: 500;
-  /* letter-spacing: 2px; */
-  text-align: center;
-  letter-spacing: 0.1em;
-  font-size: 45px;
-  max-width: 1000px;
-  margin-bottom: 40px;
-  color: #fff;
-  line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    letter-spacing: .1em;
+    font-size: 45px;
+    max-width: 1000px;
+    margin-bottom: 40px;
+    color: #fff;
+    line-height: 1.25;
 }
 
 h2 {
@@ -207,6 +207,13 @@ SEARCH
   /* flex-direction: column; */
 }
 
+.extra-h1 {
+  padding: 20px 0;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: bold;
+}
+
 .content__wrapper {
   margin: 0 auto;
   width: 100%;
@@ -220,11 +227,12 @@ SEARCH
 }
 
 .search__info {
+  color: #6030b1;
+}
+
+.black-txt {
   color: #0a1f44;
   display: inline-block;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding: 20px 0;
 }
 
 .purple {
@@ -374,4 +382,58 @@ CARDS
 .img__container {
   display: block;
   margin: 0 auto;
+}
+
+/* 
+
+Small screens
+
+*/
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  height: 27px;
+  width: 27px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.item {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+  overflow: hidden;
+}
+
+.show__animation:active {
+  animation: spinner 70ms ease-in-out forwards;
+}
+
+#phone__nav {
+  display: none;
+  position: relative;
+}
+
+@media (max-width: 750px) {
+  #phone__nav {
+    display: block;
+  }
+
+  .nav__link {
+    display: none;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

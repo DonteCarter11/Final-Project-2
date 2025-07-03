@@ -9,10 +9,13 @@
     const searchInput = document.getElementById("search");
     const levelSlider = document.getElementById("level__filter");
     const currentLevelLabel = document.getElementById("selectedLevel");
+    const searchForm = document.getElementById("search__form")
+    const searchTerm = document.querySelector(".search__term")    
 
     let allDigimon = [];
     let uniqueLevels = ["All"];
     let selectedLevel = "All";
+    let searchQuery = ""
 
     async function main() {
       const res = await fetch("https://digimon-api.vercel.app/api/digimon");
@@ -29,7 +32,7 @@
 
     function updateSliderLabel(index) {
       selectedLevel = uniqueLevels[index];
-      currentLevelLabel.textContent = selectedLevel;
+      // currentLevelLabel.textContent = selectedLevel;
       applyFilters();
     }
 
@@ -41,6 +44,7 @@
           <p>Level: ${user.level}</p>
         </div>
       `).join("");
+  
     }
 
     function applyFilters() {
@@ -53,7 +57,14 @@
       renderList(filtered);
     }
 
-    searchInput.addEventListener("input", applyFilters);
+    // searchInput.addEventListener("input", applyFilters);
+    searchForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      searchQuery = searchInput.value.trim()
+      // searchTerm.textContent = searchQuery || 
+      applyFilters()
+    })
+
     levelSlider.addEventListener("input", () => {
       const index = parseInt(levelSlider.value);
       updateSliderLabel(index);
