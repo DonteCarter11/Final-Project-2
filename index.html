@@ -22,9 +22,30 @@
             />
           </div>
           <div class="nav__links">
-            <a href="" class="nav__link">Home</a>
-            <a href="" class="nav__link">Find Your Card</a>
-            <a href="" class="nav__link nav__link--btn">Contact</a>
+            <ul class="nav__link--list">
+              <li class="nav__link">
+                <a
+                  href="#"
+                  class="nav__link--anchor link__hover-effect"
+                  >About</a
+                >
+              </li>
+              <li class="nav__link">
+                <a
+                  href="#projects"
+                  class="nav__link--anchor link__hover-effect"
+                  >Find Your Card</a
+                >
+              </li>
+              <li class="nav__link" >
+                <a
+                  href="#"
+                  class="nav__link--anchor nav__link--btn"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+           
           </div>
         </div>
         <div id="phone__nav">
@@ -52,26 +73,28 @@
             <form id="search__form">
               <input id="search" type="text" placeholder="Search by Name" />
               <div class="search__wrapper">
-                <button type="submit" id="search__btn">
-                  <svg
+                <svg
+                  type="submit"
+                  id="search__btn"
+                  onclick=""
+                  c
+                  data-v-390ceb07=""
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="search"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  class="svg-inline--fa fa-search fa-w-16 search-icon"
+                >
+                  <path
                     data-v-390ceb07=""
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="search"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    class="svg-inline--fa fa-search fa-w-16"
-                  >
-                    <path
-                      data-v-390ceb07=""
-                      fill="currentColor"
-                      d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
-                      class=""
-                    ></path>
-                  </svg>
-                </button>
+                    fill="currentColor"
+                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                    class=""
+                  ></path>
+                </svg>
               </div>
             </form>
           </div>
@@ -82,19 +105,26 @@
       <div class="progess"></div>
       <div id="filter" class="content__wrapper spacer">
         <h1 class="search__info extra-h1">
-          <span class="black-txt">Search results:</span
-          ><span style="search__term"></span>
+          <span class="black-txt">Search results:</span>
+          <span class="search__term"></span>
         </h1>
         <div class="price__filter">
           <h2>Level Range: <span class="purple">Fresh to Mega</span></h2>
           <!-- /.range--slider -->
-          <label for="levelSlider">Filter by Level:</label>
+          <label id="levelSlider"
+            >Filter by Level: <span id="selectedLevel"></span
+          ></label>
           <input type="range" id="level__filter" min="0" max="0" step="1" />
-          <span id="selectedLevel">All</span>
         </div>
       </div>
-      <div class="user__list"></div>
+      <div class="cards__loading">
+        <i class="fas fa-spinner cards__loading--spinner"></i>
+      </div>
+      <div class="user__list">
+      </div>
+      <div id="no__results" style="display: none;">No Digimon Found.</div>
     </section>
     <script src="index.js"></script>
   </body>
 </html>
+;
